@@ -1,4 +1,4 @@
-FROM arm32v7/alpine:latest
+FROM alpine:latest
 
 ENV WEBDAV_URL= \
     WEBDAV_USERNAME= \
