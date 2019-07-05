@@ -12,7 +12,7 @@ COPY sync.sh /usr/local/bin
 COPY entrypoint.sh /usr/local/bin
 COPY run.sh /usr/local/bin
 
-RUN apk --no-cache add davfs2 rsync tzdata msmtp perl && \
+RUN apk --no-cache add davfs2 rsync tzdata msmtp && \
     cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     apk del tzdata && \
     chmod u+x /usr/local/bin/entrypoint.sh && \
