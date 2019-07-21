@@ -22,7 +22,7 @@ unset WEBDAV_PASSWORD
 
 mount -t davfs $WEBDAV_URL $WEBDAV_DIR -o uid=0,gid=users,dir_mode=755,file_mode=755
 if [ -n "$(ls -1A $WEBDAV_DIR)" ]; then
-    echo "Mounted $WEBDAV_URL"
+    umount -l ${WEBDAV_DIR}
     exec "$@"
 else
     echo "Mount failed"
