@@ -15,6 +15,7 @@ fi
 
 cp -f $CONF_CRON /var/spool/cron/crontabs/root
 cp -f $CONF_MSMTP /etc/msmtprc
+mkdir -p $WEBDAV_DIR
 
 echo "use_locks 0" >> /etc/davfs2/davfs2.conf
 echo "$WEBDAV_DIR $WEBDAV_USERNAME $WEBDAV_PASSWORD" >> /etc/davfs2/secrets
